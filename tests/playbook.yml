@@ -1,0 +1,4 @@
+- name: Test role
+  hosts: all
+  roles:
+    - ansible-testinfra
