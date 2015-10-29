@@ -8,4 +8,5 @@ if [ -z "$VIRTUAL_ENV" ]; then
     source venv/bin/activate
 fi
 
-testinfra --hosts=testinfra --ssh-config=.vagrant/ssh-config testinfra/*
+testinfra --hosts=testinfra --ssh-config=.vagrant/ssh-config testinfra/* --junit-xml junit.xml
+
