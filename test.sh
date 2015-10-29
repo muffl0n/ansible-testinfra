@@ -4,6 +4,8 @@ if [ ! -f .vagrant/ssh-config ]; then
     vagrant ssh-config > .vagrant/ssh-config
 fi
 
-source venv/bin/activate
+if [ -z "$VIRTUAL_ENV" ]; then
+    source venv/bin/activate
+fi
+
 testinfra --hosts=testinfra --ssh-config=.vagrant/ssh-config testinfra/*
-deactivate

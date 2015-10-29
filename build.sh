@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ ! -d venv ]; then
-    pyvenv-3.4 venv
+    virtualenv venv
 fi
 
 source venv/bin/activate
