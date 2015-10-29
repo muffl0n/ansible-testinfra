@@ -3,8 +3,6 @@ Vagrant.configure(VAGRANT_API_VERSION) do |config|
 
   config.vm.box = 'ubuntu/trusty64'
 
-  config.vbguest.auto_update = false
-
   config.vm.define :testinfra do |d|
     d.vm.hostname = 'testinfra'
 
